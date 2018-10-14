@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 import Board from './board'
 
 class Game extends React.Component {
-  render () {
+  render() {
     return (
       <div className="game">
         <div className="game-board">
@@ -15,7 +15,7 @@ class Game extends React.Component {
           <ol>{/* TODO */}</ol>
         </div>
       </div>
-    )
+    );
   }
 }
 
