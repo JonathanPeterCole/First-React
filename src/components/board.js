@@ -4,12 +4,12 @@ import { render } from 'react-dom'
 import Square from './square'
 
 class Board extends React.Component {
-  renderSquare(i) {
-    return <Square value={i} />;
+  renderSquare (i) {
+    return <Square />
   }
 
-  render() {
-    const status = 'Next player: X';
+  render () {
+    const status = 'Next player: X'
 
     return (
       <div>
