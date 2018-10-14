@@ -1,4 +1,10 @@
-import { add, subtract } from './module'
-const resultA = add(2, 3)
-const resultB = subtract(5, 1)
-console.log(resultA, resultB)
+/**
+ * index.js
+ */
+import React from 'react';
+import { render } from 'react-dom';
+const MainApp = () => (
+  <h1>Hello React!</h1>
+);
+// render the app
+render(<MainApp />, document.getElementById('app'));
