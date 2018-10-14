@@ -1,10 +1,15 @@
-/**
- * index.js
- */
-import React from 'react';
-import { render } from 'react-dom';
-const MainApp = () => (
-  <h1>Hello React!</h1>
-);
-// render the app
-render(<MainApp />, document.getElementById('app'));
+// From the ReactJS tutorial:
+// https://reactjs.org/tutorial/tutorial.html
+
+// React
+import React from 'react'
+import { render } from 'react-dom'
+
+// Components
+import Game from './components/game'
+
+// Render
+render(
+  <Game />,
+  document.getElementById('app')
+)
