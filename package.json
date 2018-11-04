@@ -2,7 +2,7 @@
   "name": "first-react",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "node ./server/index.js",
     "build": "webpack",
@@ -37,6 +37,8 @@
     "express": "^4.16.4",
     "pug": "^2.0.3",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
   }
 }
