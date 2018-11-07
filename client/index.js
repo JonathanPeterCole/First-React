@@ -6,20 +6,14 @@ import React from 'react'
 import { render } from 'react-dom'
 
 // Components
+import Connection from './components/connection'
 import Game from './components/game'
-
-// Socket IO
-import io from 'socket.io-client'
-
-// Log the connection to the server
-const socket = io()
-socket.on('connect', () => {
-  // Log the connection
-  console.log('Connected to server')
-})
 
 // Render
 render(
-  <Game />,
+  <div>
+    <Connection />
+    <Game />
+  </div>,
   document.getElementById('app')
 )
