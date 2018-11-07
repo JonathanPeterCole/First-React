@@ -2,6 +2,13 @@ ol, ul {
   padding-left: 30px;
 }
 
+.game {
+  margin: 10px;
+  padding: 20px 22px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
 .board-row:after {
   clear: both;
   content: "";

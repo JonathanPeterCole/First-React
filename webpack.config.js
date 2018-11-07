@@ -5,7 +5,7 @@ module.exports = {
   entry: './client/index',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'public', 'js')
+    path: path.resolve(__dirname, 'public')
   },
   module: {
     rules: [

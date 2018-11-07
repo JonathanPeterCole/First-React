@@ -1,6 +1,11 @@
+// React
 import React from 'react'
 
-import { clientNumber, dataUpdate } from '../api'
+// Style
+import './style.css'
+
+// Style
+import { clientNumber, dataUpdate } from '../../api'
 
 class Connection extends React.Component {
   constructor (props) {
