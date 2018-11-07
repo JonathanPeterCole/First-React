@@ -1,7 +1,7 @@
 import io from 'socket.io-client'
 
 // Log the connection to the server
-const socket = io()
+const socket = io('/api')
 socket.on('connect', () => {
   console.log('Connected to server.')
 })

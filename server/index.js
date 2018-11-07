@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.use('/', indexRouter)
 
 // Socket IO
-io.on('connection', socketApi)
+io.of('/api').on('connection', socketApi)
 
 // Listen
 server.listen(3000)
