@@ -61,4 +61,4 @@ typings/
 .next
 
 # webpack processed files
-public/js
+public
