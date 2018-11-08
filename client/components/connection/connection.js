@@ -13,6 +13,7 @@ class Connection extends React.Component {
 
     // Set the initial state
     this.state = {
+      connected: false,
       status: 'Attempting to connect...',
       data: 'Awaiting data...'
     }
@@ -20,9 +21,15 @@ class Connection extends React.Component {
     // Update the status
     clientNumber((err, number) => {
       if (!err) {
-        this.setState({ status: 'Connected as client ' + number })
+        this.setState({
+          connected: true,
+          status: 'Connected as client ' + number
+        })
       } else {
-        this.setState({ status: 'Attempting to reconnect...' })
+        this.setState({
+          connected: false,
+          status: 'Attempting to reconnect...'
+        })
       }
     })
 
@@ -34,7 +41,7 @@ class Connection extends React.Component {
 
   render () {
     return (
-      <div className='connection'>
+      <div className={this.state.connected ? 'connection' : 'connection disconnected'}>
         <div className='connection-status'>{this.state.status}</div>
         <div className='data'>{this.state.data}</div>
       </div>
