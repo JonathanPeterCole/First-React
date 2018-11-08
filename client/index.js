@@ -7,16 +7,18 @@ import { render } from 'react-dom'
 
 // Components
 import Connection from './components/connection/connection'
-import Game from './components/game/game'
+import Search from './components/search/search'
 
 // Digital Style
 import './style.css'
 
 // Render
 render(
-  <div className='container'>
+  <div className='page'>
     <Connection />
-    <Game />
+    <div className='container'>
+      <Search />
+    </div>
   </div>,
   document.getElementById('app')
 )

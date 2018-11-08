@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  background: #151515;
   font-family: sans-serif;
 }
 
 .container {
-  max-width: 800px;
-    margin: auto;
+  max-width: 860px;
+  margin: auto;
 }
