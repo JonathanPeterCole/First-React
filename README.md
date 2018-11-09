@@ -1,5 +1,7 @@
 # First React
 
+An experimental project to build a full-stack web app with React, Express, Socket IO, and more, without using create-react-app.
+
 ## Quick Start
 
 1. Install the npm packages  
@@ -22,6 +24,10 @@
 * **Build Development**  
   Runs webpack to build the client-side Javascript with dev sourcemaps.  
   `npm run buildDev` 
+
+* **Test**  
+  Runs Jest to test the code.  
+  `npm run test`
 
 * **Linting**  
   Runs ESLint to lint both the client and server-side code.  
@@ -54,5 +60,5 @@
   Configured in `package.json`.
 
 * **Jest**  
-  Used for testing.
+  Used for testing.  
   Configured in `package.json`.
