@@ -5,9 +5,10 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node ./server/index.js",
-    "build": "webpack",
+    "build": "webpack --mode production --config webpack.config.js",
+    "buildDev": "webpack --mode development --config webpack.dev.config.js",
     "lint": "eslint . --ext .js,.jsx",
-    "lintfix": "eslint . --ext .js,.jsx --fix",
+    "lintFix": "eslint . --ext .js,.jsx --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
