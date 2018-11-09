@@ -6,7 +6,7 @@ import SearchBar from './searchbar/searchbar'
 import Results from './results/results'
 
 // Search
-import getResults from './repo'
+import getResults from './repo/repo'
 
 // Style
 import './style.css'

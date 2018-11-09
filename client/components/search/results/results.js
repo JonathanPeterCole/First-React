@@ -12,8 +12,8 @@ class Results extends React.Component {
   render () {
     return (
       <div className='results'>
-        {this.props.items.map(note => (
-          <Note title={note.title} body={note.body} />
+        {this.props.items.map((note, key) => (
+          <Note key={key} title={note.title} body={note.body} />
         ))}
       </div>
     )

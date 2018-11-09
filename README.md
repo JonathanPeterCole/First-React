@@ -43,12 +43,16 @@
 
 * **ES Lint**  
   Used for Javascript linting.  
-  Configured with `.eslintrc.js` and `.eslintignore`.
+  Configured in `package.json` and with `.eslintignore`.
 
 * **Webpack**  
   Used for running build tasks.  
-  Configured with `webpack.config.js`.
+  Configured with `webpack.config.js` and `webpack.dev.config.js` in the config folder.
 
 * **Babel**  
   JS compiler for client-side code.  
-  Configured with `.babelrc`.
+  Configured in `package.json`.
+
+* **Jest**  
+  Used for testing.
+  Configured in `package.json`.
