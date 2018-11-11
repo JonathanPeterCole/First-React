@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notes render correctly 1`] = `
+<div
+  className="note"
+>
+  <div
+    className="title"
+  >
+    Test Title
+  </div>
+  <div
+    className="body"
+  >
+    Test Body
+  </div>
+</div>
+`;
