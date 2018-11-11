@@ -1,13 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { configure, mount } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { mount } from 'enzyme'
 
 // Component
 import Results from './results'
-
-// Configure Enzyme
-configure({ adapter: new Adapter() })
 
 // Prepare variable for test data
 let testData

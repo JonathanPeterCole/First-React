@@ -1,13 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { configure, shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 
 // Component
 import Search from './search'
-
-// Configure Enzyme
-configure({ adapter: new Adapter() })
 
 // Tests
 it('Search renders without crashing', () => {
