@@ -4,16 +4,27 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "node ./server/index.js",
-    "build": "webpack --mode production --config ./config/webpack.config.js",
-    "buildDev": "webpack --mode development --config ./config/webpack.dev.config.js",
+    "start": "npm run start:prod",
+    "start:prod": "cross-env NODE_ENV=production nodemon ./server/index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./server/index.js",
+    "build": "npm run build:prod",
+    "build:prod": "cross-env MODE_ENV=production webpack",
+    "build:dev": "cross-env MODE_ENV=development webpack",
+    "watch": "npm run watch:prod",
+    "watch:prod": "cross-env MODE_ENV=production webpack --watch",
+    "watch:dev": "cross-env MODE_ENV=development webpack --watch",
+    "buildRun": "npm run buildRun:prod",
+    "buildRun:prod": "concurrently \"npm:watch:prod\" \"npm:start:prod\"",
+    "buildRun:dev": "concurrently \"npm:watch:dev\" \"npm:start:dev\"",
     "lint": "eslint . --ext .js,.jsx",
-    "lintFix": "eslint . --ext .js,.jsx --fix",
+    "lint:fix": "eslint . --ext .js,.jsx --fix",
     "test": "jest"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -23,6 +34,8 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
@@ -37,12 +50,15 @@
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
     "file-loader": "^2.0.0",
+    "husky": "^1.3.1",
     "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
     "pre-commit": "^1.2.2",
     "style-loader": "^0.23.1",
     "svg-inline-loader": "^0.8.0",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "cookie-parser": "^1.4.3",

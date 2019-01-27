@@ -4,43 +4,58 @@ An experimental project to build a full-stack web app with React, Express, Socke
 
 ## Quick Start
 
-1. Install the npm packages  
-  `npm install`
+### Prerequisites
 
-1. Build the application  
-  `npm run build`
+To build this application, you'll need Node.JS installed with NPM (bundled with Node.JS). You can download them here:
 
-1. Run the application  
-  `npm run start`
+[Download Node.JS and NPM](https://nodejs.org/en/)
 
-1. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
+### Install and Run
+
+Clone the repo  
+```
+git clone git@github.com:JonathanPeterCole/First-React.git
+```
+
+Install with NPM  
+```
+npm install
+```
+
+Build and run the applcation  
+```
+npm run buildRun
+```
+
+View the application in your browser at [http://localhost:3000/](http://localhost:3000/)
 
 ## Commands
+
+The following NPM scripts are included in the project. For the commands that build or start the project, you can specify the environment with `:prod` or `:dev`.  
+
+* **Start**  
+  Runs the application on port 3000.  
+  `npm run start`
 
 * **Build**  
   Runs webpack to build the client-side Javascript.  
   `npm run build`  
 
-* **Build Development**  
-  Runs webpack to build the client-side Javascript with sourcemaps for easier debugging.  
-  `npm run buildDev` 
+* **Watch**  
+  Runs webpack to build the client-side Javascript, watching for changes.  
+  `npm run watch`  
+
+* **Build and Run**  
+  Runs webpack to build the client-side Javascript and starts the app, watching for changes.  
+  `npm run buildRun`
 
 * **Test**  
   Runs Jest to test the code.  
   `npm run test`
 
 * **Linting**  
-  Runs ESLint to lint both the client and server-side code.  
-  `npm run lint`
-
-* **Linting Fix**  
-  Runs ESLint with --fix to lint the code and attempt to automatically apply fixes.  
-  `npm run lintFix`
-
-* **Start**  
-  Runs the application on port 3000.  
-  `npm run start`
-
+  Runs ESLint to lint both the client and server-side code. Use `:fix` to attempt to automatically apply fixes.  
+  `npm run lint`  
 
 ## Tools and Config
 
@@ -64,7 +79,7 @@ An experimental project to build a full-stack web app with React, Express, Socke
 
 * **Webpack**  
   Used for running build tasks.  
-  Configured with `webpack.config.js` and `webpack.dev.config.js` in the config folder.
+  Configured with the webpack files in the config folder.
 
 * **Babel**  
   JS compiler for client-side code.  
